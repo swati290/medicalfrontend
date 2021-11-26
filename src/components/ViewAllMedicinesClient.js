@@ -110,7 +110,9 @@ export default class ViewAllMedicinesClient extends Component {
    <li class="nav-item">
      <a class="nav-link" href="/about"> AboutUs</a>
    </li>
-   
+   <li class="nav-item">
+     <a class="nav-link" href="/chatbot1"> Chatbot1</a>
+   </li>
    {/* <li class="nav-item dropdown">
    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
      Login

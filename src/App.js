@@ -102,7 +102,7 @@ const steps=[
        <Route path="/login" exact component={login}></Route>
        <Route path="/profile" exact component={Profile}></Route>
        <Route path="/login1" exact component={Login1}></Route>
-       <Route path="/chatbot" exact component={ChatBot1}></Route>
+       <Route path="/ChatBot" exact component={ChatBot1}></Route>
        <Route path="/addproduct" exact component={AddProduct}></Route>
        <Route path="/updateproduct" exact component={UpdateProduct}></Route>
        <Route path="/viewallmedicines" exact component={ViewAllMedicines}></Route>

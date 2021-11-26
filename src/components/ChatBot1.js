@@ -1,14 +1,31 @@
 import React, { Component } from 'react';
 import ChatBot from "react-simple-chatbot"; 
 import Post from './Post';
+import { ThemeProvider } from 'styled-components';
+
 const config ={
   width: "400px",
   height: "500px",
   floating: true,
 };
+
+
+
+const theme = {
+  background: '#f5f8fb',
+  fontFamily: 'Helvetica Neue',
+  headerBgColor: '#EF6C00',
+  headerFontColor: '#fff',
+  headerFontSize: '15px',
+  botBubbleColor: '#EF6C00',
+  botFontColor: '#fff',
+  userBubbleColor: '#fff',
+  userFontColor: '#4a4a4a',
+};
     export default class ChatBot1 extends Component {
       render() {
         return (
+          <ThemeProvider theme={theme}>
           <ChatBot 
           steps={[
             {
@@ -94,36 +111,54 @@ user:true,
                      return'Please enter 10 digit valid phone number.';
                    }
               },
-     trigger:'intro',
+     trigger:'intromedicine',
             },
 
-           
+  
             {
-              id:'intro', 
-              message:'Do you agree to the Terms and Conditions?', 
+              id:'intromedicine', 
+              message:'Which medicine do you need?', 
               trigger:'intro-user',
             },
             {
               id:'intro-user', 
               options:[
-              {value:'y', label:'Yes', trigger:'yes-response'},
-              {value:'n', label:'No', trigger:'no-response'},
+              {value:'dolo', label:'dolo', trigger:'yes-response'},
+              {value:'crosin', label:'crosin', trigger:'ye-response'},
               ] 
             },
+
+
+
+
+
+           
+            // {
+            //   id:'intro', 
+            //   message:'Do you agree to the Terms and Conditions?', 
+            //   trigger:'intro-user',
+            // },
+            // {
+            //   id:'intro-user', 
+            //   options:[
+            //   {value:'y', label:'Yes', trigger:'yes-response'},
+            //   {value:'n', label:'No', trigger:'no-response'},
+            //   ] 
+            // },
             {
               id:'yes-response', 
-              message:'Great!', 
+              message:'Dolo 650 Tablet is a medicine used to relieve pain and to reduce fever. It is used to treat many conditions such as headaches, body aches, toothaches, and the common cold. It works by inhibiting the release of certain chemicals that cause pain and fever.', 
               // end:true,
               trigger:'q-submit'
             },
             {
-              id:'no-response', 
-              message:'Sorry to hear that.', 
+              id:'ye-response', 
+              message:'Crocin Advance Tablet 20 s belongs to the group of mild analgesics (pain killer), and antipyretic (fever-reducing agent) used to treat mild to moderate pain including headache, migraine, toothache, menstrual period pain, osteoarthritis pain, musculoskeletal pain, and reducing fever.', 
               // end:true,
             },
             {
               id:'q-submit', 
-              message:'Do you wish to submit?', 
+              message:'Do you want to purchase?', 
               trigger:'submit'
             },
             {
@@ -147,6 +182,7 @@ user:true,
           ]}
           {...config}
           />
+          </ThemeProvider>
         );
       }
            

@@ -52,7 +52,10 @@ import medicine from '../Images/medicine.png';
         <li class="nav-item">
           <a class="nav-link" href="/about"> AboutUs</a>
         </li>
-        
+        <li class="nav-item">
+     <a class="nav-link" href="/chatbot"> Chatbot</a>
+   </li>
+      
        
         
        </ul>

@@ -25,6 +25,9 @@ export default class AdminHome extends Component {
  clientregistration= () =>{
     this.props.history.push('/register');
   }
+  ChatBot1=()=>{
+    this.props.history.push('/chatbot')
+  }
   
     render() {
         return (<div>
@@ -88,11 +91,14 @@ export default class AdminHome extends Component {
                 </div> */}
                 <button style={{marginLeft: "10px",  width:"100px", borderBlockColor:"black"}}className="btn btn-primary" onClick = {this.Login1}>Login</button>
                 <button style={{marginLeft: "10px",width:"100px",borderBlockColor:"black"}}  className="btn btn-primary"onClick = {this.clientregistration}>Register </button>
-               
+                {/* <button style={{marginLeft: "10px",  width:"100px", borderBlockColor:"black"}}className="btn btn-primary" onClick = {this.ChatBot1}>Chatbot</button> */}
                 {/* <img src='./Images/ClientLogo.webp' style={{height: "50px", width: "50px", position:"cover"}}></img> */}
               </div>
               <div>
-                 
+              <li class="nav-item">
+          <a class="nav-link" href="/chatbot"> ChatBot</a>
+        </li>
+        
                  
               </div>
 
@@ -100,5 +106,6 @@ export default class AdminHome extends Component {
        </div>
           
         )
+        
     }
 }
